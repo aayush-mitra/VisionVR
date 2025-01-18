@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | VisionVR</title>
+    <link rel="stylesheet" href="experiences.css">
+    <link rel="icon" href="logo_small.webp">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="nav-link">
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="nav-link">
+                    <a href="experience.html">Experiences</a>
+                </div>
+            </div>
+            <div class="logo">
+                <a style="border: none;" href="index.html">
+                <img src="logo_small.webp" alt="">
+            </a>
+            </div>
+            <div class="nav-right">
+                <div class="nav-link">
+                    <a href="about.html#careers">Careers</a>
+                </div>
+                <div class="nav-link">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            
+        </nav>
+    </header>
+
+    <div class="experiences">
+        <h1>Experiences & Services</h1>
+        <div class="experience-container">
+            <div class="experience">
+                <div class="experience-left">
+                    <div class="experience-hue">
+                        <div class="experience-text">
+                            <h4>Arcade</h4>
+                        </div>
+                        <button>Learn More</button>
+                    </div>
+                    <img src="vr_arcade.jpg" alt="">
+                </div>
+                <div class="experience-right">
+                    <p class="experience-subtext">Step into the VisionVR arcade, where classic gaming nostalgia meets cutting-edge virtual reality. With over 130 high-quality games, our arcade caters to everyone—from casual players to gaming enthusiasts. Immerse yourself in short, action-packed VR games designed for solo or multiplayer fun. Whether you're battling robots, exploring fantasy worlds, or racing futuristic vehicles, our arcade promises an unforgettable experience in every session.</p>
+                    <p class="experience-pricing">Approximate Cost: $30/person</p>
+                    
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="experience-left">
+                    <div class="experience-hue">
+                        <div class="experience-text">
+                            <h4>Cafe</h4>
+                        </div>
+                        <button>Learn More</button>
+                    </div>
+                    <img src="cafe.jpg" alt="">
+                </div>
+                <div class="experience-right">
+                    <p class="experience-subtext">Take a break from the action and relax in our cozy café, the perfect spot to recharge. Enjoy a menu crafted to satisfy, featuring refreshing beverages, delicious snacks, and hearty meals. Whether you're grabbing a quick coffee or indulging in a full meal, our café provides a warm, welcoming space for gamers and non-gamers alike. Designed with VR-themed décor, it's a social hub where you can unwind or strategize for your next adventure.</p>
+                    <p class="experience-pricing">Approximate Cost: $20/person</p>
+                    
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="experience-left">
+                    <div class="experience-hue">
+                        <div class="experience-text">
+                            <h4>Experiences</h4>
+                        </div>
+                        <button>Learn More</button>
+                    </div>
+                    <img src="vr_experiences.jpg" alt="">
+                </div>
+                <div class="experience-right">
+                    <p class="experience-subtext">Discover exclusive VR adventures available only at VisionVR. Our team of talented developers creates proprietary games and experiences that push the boundaries of immersive technology. Dive into thrilling storylines, explore fantastical realms, or challenge your skills in collaborative puzzles. These unique experiences are constantly updated, ensuring there's always something new and exciting to try with every visit.</p>
+                    <p class="experience-pricing">Approximate Cost: $293/group</p>
+                    
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="experience-left">
+                    <div class="experience-hue">
+                        <div class="experience-text">
+                            <h4>Parties</h4>
+                        </div>
+                        <button>Learn More</button>
+                    </div>
+                    <img src="groups.jpg" alt="">
+                </div>
+                <div class="experience-right">
+                    <p class="experience-subtext">Make memories with friends, family, or coworkers through our group reservations. Perfect for birthdays, corporate events, or casual get-togethers, VisionVR offers tailored group packages that include high-end VR experiences and arcade access. Choose from a variety of themes and games to create a fun, collaborative atmosphere. With options for food and refreshments from our café, your group is guaranteed an unforgettable, fully immersive adventure.</p>
+                    <p class="experience-pricing">Approximate Cost: $400/group</p>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <footer>
+            <div class="footer-left">
+                <img src="Artboard_2.PNG" alt="">
+            </div>
+            <div class="footer-right">
+                <div class="links-top">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="experiences.html">Experiences</a>
+                    <a href="locations.html">Locations & Careers</a>
+                    <a href="contact.html">Contact</a>
+                    
+    
+                </div>
+                <div class="links-bottom">
+                    <div class="instagram-link">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="https://www.instagram.com/visionvr.austin/" target="_blank">Instagram</a>
+                    </div>
+                    
+                    <div class="email-link">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:visionvr@gmail.com">Email</a>
+                    </div>
+                    <div class="phone-link">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="#">Phone</a>
+                    </div>
+                </div>
+                <p style="display: flex; align-items: center;" class="copyright">&copy; 2025 VisionVR. All Rights Reserved.</div>
+            </div>
+        </footer>
+    </div>
+
+    
+    <script>
+        const experienceLefts = document.querySelectorAll('.experience-left')
+        const experienceRights = document.querySelectorAll('.experience-right')
+        const experiences = document.querySelectorAll('.experience')
+        window.addEventListener('scroll', () => {
+            // console.log(window.scrollY)
+            if (window.scrollY >= 917) {
+                experiences[3].style.animation = 'flyinbottom 1.5s'
+            } else if (window.scrollY >= 420) {
+                experiences[2].style.animation = 'flyinbottom 1.5s'
+            } 
+            
+        })
+
+        const experienceHues = document.querySelectorAll('.experience-hue');
+        console.log(experienceHues)
+        experienceHues.forEach(hue => {
+            hue.addEventListener('mouseover', () => {
+                console.log("Hello")
+                
+                hue.style.animation = 'experience-hover 0.5s';
+                hue.className = 'experience-hue hover'
+                setTimeout(() => {
+                    
+                }, 990)
+                
+            })
+
+            hue.addEventListener('mouseout', () => {
+                hue.style.animation = 'experience-hover-out 0.5s';
+                hue.className = 'experience-hue'
+                setTimeout(() => {
+                    
+                }, 1000)
+            })
+        });
+
+        const btns = document.querySelectorAll('button')
+        console.log(btns)
+        let btnStates = [false, false, false, false]
+        
+        btns.forEach((btn, i) => {
+            
+            btn.addEventListener('click', () => {
+                if (!btnStates[i]) {
+                    experienceLefts[i].style.animation = 'expand-experience-left 1s';
+                    experienceLefts[i].style.width = '50%'
+
+                    experienceRights[i].style.animation = 'expand-experience-right 2s';
+                    experienceRights[i].style.width = '50%'
+
+                    experiences[i].style.animation = 'expand-experience-overall 1s';
+                    experiences[i].style.width = '1000px'
+
+                    btn.innerHTML = 'Close'
+                    btnStates[i] = true
+                } else {
+                    experienceLefts[i].style.animation = 'expand-experience-left-reverse 1s';
+                    experienceLefts[i].style.width = '100%'
+
+                    experienceRights[i].style.animation = 'expand-experience-right-reverse 2s';
+                    experienceRights[i].style.width = '0%'
+
+                    experiences[i].style.animation = 'expand-experience-overall-reverse 1s';
+                    experiences[i].style.width = '800px'
+
+                    btn.innerHTML = 'Learn More'
+                    btnStates[i] = false
+                }
+                
+                
+            })
+        })
+    </script>
+</body>
+</html>

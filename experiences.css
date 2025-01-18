@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    background-color: #0f0014;
+    color: white;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+    background: black;
+    height: 100px;
+    width: 100%;
+    padding: 0px 100px;
+    animation: header-flyin 1s;
+}
+
+
+nav {
+    width: 100%;
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.05em;
+    padding: 3px;   
+    border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    
+    transition: all 0.3s;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 30px;
+    margin: 0px 20px;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo img {
+    height: 100%;
+
+}
+
+.experiences {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    animation: fadein 1s;
+}
+
+.experience-container {
+    display: flex;
+    padding: 50px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.experience {
+    width: 800px;
+    border-radius: 15px;
+    border: 2px solid #6496f8;
+    display: flex;
+    height: 500px;
+    
+}
+
+.experience-left {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.experience-left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+@keyframes experience-hover {
+    0% {
+        
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes experience-hover-out {
+    0% {
+        
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
+        
+    }
+}
+
+.experience-hue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    border-radius: 15px;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    
+}
+
+.experience-hue.hover {
+    background-color: rgba(0, 0, 0, 0.7);;
+    opacity: 1;
+}
+
+
+
+.experience-hue .experience-text h4 {
+    font-weight: 300;
+    font-size: 3.6em;
+    
+}
+
+.experience-hue button {
+    padding: 12px;
+    font-family: "Roboto Mono", serif;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: #6496f8;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 150px;
+    box-shadow:
+    0 0 5px 3px rgba(0, 0, 0, 0), /* middle magenta */
+    0 0 7px 4px rgba(0, 0, 0, 0); /* outer cyan */
+}
+
+
+
+.experience-right {
+    width: 0%;
+    overflow: hidden;
+}
+
+.experiences h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-weight: lighter;
+    font-size: 2.2em;
+}
+
+.experience-right {
+    
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.experience-subtext {
+    padding: 30px 30px 0px 30px;
+}
+
+.experience-price {
+    padding-bottom: 30px;
+}
+
+@keyframes expand-experience-left {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes expand-experience-right {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+    
+
+    50% {
+        width: 50%;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes expand-experience-overall {
+    0% {
+        width: 800px;
+    }
+
+    100% {
+        width: 1000px;
+    }
+}
+
+@keyframes expand-experience-left-reverse {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes expand-experience-right-reverse {
+    0% {
+        width: 50%;
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }    
+    
+
+    100% {
+        width: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes expand-experience-overall-reverse {
+    0% {
+        width: 1000px;
+    }
+
+    100% {
+        width: 800px;
+    }
+}
+
+@keyframes header-flyin {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes flyinbottom {
+    0% {
+        transform: translateY(500px) ;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.experiences {
+    
+}
+footer {
+    height: 250px;
+    background-color: black;
+    display: flex;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6496f8;
+    border-radius: 5px;
+}
+
+.footer-left {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-left img {
+    width: auto;
+    height: 70%;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 30px;
+    padding-left: 70px;
+    font-size: 1.05em;
+}
+
+.links-top {
+    display: flex;
+    gap: 30px;
+    
+}
+
+.links-top a{
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.links-bottom {
+    display: flex;
+    
+    gap: 30px;
+}
+
+.links-bottom div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links-bottom a {
+    color: white;
+        padding: 5px;
+    text-decoration: none;
+}
+footer a {
+    border-bottom: 1px solid transparent
+}
+
+footer a:hover {
+    border-bottom: 1px solid white;
+}
